@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    font-size: 16px;
+    border-top: 50px solid #DE321D;
+    border-bottom: 50px solid #DE321D;
+    padding: 50px;
+}
+
+h1 {
+    width: 1200px;
+    font-size: 3em;
+    font-weight: bold;/*フォントを太字にする*/
+    text-align: center;/*インライン要素を中央揃え*/
+    margin-bottom: 1em;/*空白の挿入(外)*/
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;/*ブロックレベル要素を中央揃え*/
+    margin-bottom: 100px;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header ul li {
+    width: 1200px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.header ul li :first-child {
+    border-left: 1px solid #ddd;
+}
+
+.header ul li a {
+    display: block;/*ブロック間で中央寄せ*/
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: .5em .7em;
+    border-top: 2px solid #59bbf7;
+    border-bottom: 2px solid #59bbf7;
+    background-image: linear-gradient(45deg, #59bbf712 25%, transparent 25%, transparent 50%, #59bbf712 50%, #59bbf712 75%, transparent 75%, transparent), linear-gradient(-45deg, #59bbf712 25%, transparent 25%, transparent 50%, #59bbf712 50%, #59bbf712 75%, transparent 75%, transparent);
+    background-color: #59bbf70d;
+    background-size: 20px 20px;
+    color: #59bbf7;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.work {
+    display: flex;/*ブロックで並列*/
+    justify-content: space-between;/*2列で配置していく*/
+}
+
+.god {
+    width: 500px;
+    text-align: center;
+}
+
+.othello {
+    width: 500px;
+    text-align: center;
+}
+
+.work img {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.work p {
+    margin-bottom: 50px;
+}
+
+.work a {
+    background: #008080;
+    color: #fff;
+    padding: 15px 20px 12px;
+}

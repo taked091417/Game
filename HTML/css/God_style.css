@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    font-size: 16px;
+    border-top: 50px solid #DE321D;
+    border-bottom: 50px solid #DE321D;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;/*中央揃え*/
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;/*img以外を中央揃え*/
+    margin-bottom: 100px;
+}
+
+.header ul {
+    display: flex;/*並列*/
+}
+
+.header ul li {
+    width: 1200px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.header ul li :first-child {
+    border-left: 1px solid #ddd;
+}
+
+.header ul li a {
+    display: block;
+}
+
+h2 {
+    font-size: .75rem;/*1em = 16px*/
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: .04em;/*文字間の空白*/
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2::before {/*疑似要素を生成*/
+    font-family: "BIZ UDP明朝";
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: .05em;
+    content: attr(data-label);
+}
+
+.list {/*枠*/
+    list-style-type: none;/*連番を何で表すか*/
+    padding: 1em;
+    border: 5px solid #2589d0;
+    display: inline-block;
+    counter-reset: li;/*連番の設定*/
+    width: 600px;
+    margin-left: 590px;
+    margin-bottom: 100px;
+}
+
+.list li {/*文字*/
+    display: flex;
+    align-items: center;
+    padding: .3em;
+}
+
+.list li::before {/*連番*/
+    display: inline-block;
+    min-width: 1.7em;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #2589d0;
+    color: #fff;
+    font-weight: bold;
+    font-size: .75em;
+    line-height: 1.7em;
+    text-align: center;
+    content: counter(li);
+    counter-increment: li;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    position: relative;
+    padding-top: 1.5em;
+    color: #333333;
+    font-size: 36px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.container h2::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    color: #d9f4ff;
+    font-size: 2.5em;
+    line-height: 1;
+    content: attr(data-number);
+    pointer-events: none;
+}
+
+.container p {
+    width: 1000px;
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+video {
+    width: 1200px;
+    height: 600px;
+}
+
+.movie p {
+    margin-left: 0px;
+}
+
+.image_block {
+    display: flex;
+    flex-wrap: wrap;/*折り返し*/
+    justify-content: space-around;
+}
+
+.image_block img {
+    width: 580px;
+    height: 290px;
+    margin-bottom: 100px;
+}
+
+.blueprint_block h2 {
+    font-size: 24px;
+    font-weight: bold;
+    padding:0 .4em .2em;
+    border-bottom: 3px solid #2589d0;
+    background-color: #ffffff;
+    color: #333333;
+    display: inline-block;/*インラインにサイズを合わせる*/
+}
+
+.blueprint_block p {
+    margin-bottom: 50px;
+}
+
+.blueprint img {
+    width: 1200px;
+    height: auto;/*横の比率に合わせて自動で設定する*/
+    margin-bottom: 100px;
+}
+
+.blender_block {
+    display: flex;
+    flex-wrap: wrap;/*折り返し*/
+    justify-content: space-around;
+}
+
+.blender img {
+    width: 560px;
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.detail {
+    margin: 0 auto;
+}
+
+.detail a {
+    background: #008080;
+    color: #fff;
+    padding: 15px 20px 12px;
+    width: 600px;
+    margin-left: 565px;
+}

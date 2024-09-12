@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+    font-size: 16px;
+    border-top: 50px solid #DE321D;
+    border-bottom: 50px solid #DE321D;
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;/*中央揃え*/
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;/*img以外を中央揃え*/
+    margin-bottom: 100px;
+}
+
+.header ul {
+    display: flex;/*並列*/
+}
+
+.header ul li {
+    width: 1200px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.header ul li :first-child {
+    border-left: 1px solid #ddd;
+}
+
+.header ul li a {
+    display: block;
+}
+
+h2 {
+    font-size: .75rem;/*1em = 16px*/
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: .04em;/*文字間の空白*/
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2::before {/*疑似要素を生成*/
+    font-family: "BIZ UDP明朝";
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: .05em;
+    content: attr(data-label);
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+video {
+    width: 1200px;
+    height: 600px;
+    margin-bottom: 100px;
+}
+
+.detail a {
+    background: #008080;
+    color: #fff;
+    padding: 15px 20px 12px;
+    width: 600px;
+    margin-left: 565px;
+}
