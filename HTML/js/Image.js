@@ -3,7 +3,23 @@ const images = document.querySelectorAll('.bp_image');
 let press = false;
 let rect;
 let scale = 1;
-let pos = zoompos = mousepos = mousemove = mousedrag = {
+let pos = {
+    x: 0,
+    y: 0,
+};
+let zoompos = {
+    x: 0,
+    y: 0,
+};
+let mousepos = {
+    x: 0,
+    y: 0,
+};
+let mousedrag = {
+    x: 0,
+    y: 0,
+};
+let mousemove = {
     x: 0,
     y: 0,
 };
@@ -19,10 +35,8 @@ for(var i = 0; i < images.length; i++){
 
 function MouseDown(){
     if (press == false && scale > 1){
-        zoompos = {
-            x: pos.x,
-            y: pos.y,
-        };
+        zoompos.x = pos.x;
+        zoompos.y = pos.y;
         press = true;
     }else{
         press = false;
@@ -35,7 +49,7 @@ function MouseWheel(event){
     mousepos = {
         x:event.clientX,
         y:event.clientY,
-    }
+    };
 
     if (event.deltaY > 0){
         scale *= 0.9;
@@ -63,10 +77,9 @@ function MouseMove(event){
             y: event.clientY - rect.top,
         };
 
-        pos.x = zoompos.x + (mousemove.x - mousedrag.x) / scale;
-        pos.y = zoompos.y + (mousemove.y - mousedrag.y) / scale;
+        pos.x = zoompos.x + (mousemove.x - mousedrag.x) / 1.2;
+        pos.y = zoompos.y + (mousemove.y - mousedrag.y) / 1.2;
 
-        console.log(pos);
         images[event.target.id].style.transform = `translate(${pos.x}px,${pos.y}px) scale(${scale})`
     }else{
         mousemove = {
