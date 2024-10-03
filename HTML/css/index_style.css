@@ -9,11 +9,10 @@ body {
 }
 
 h1 {
-    width: 1200px;
-    font-size: 3em;
+    font-size: 48px;
     font-weight: bold;/*フォントを太字にする*/
     text-align: center;/*インライン要素を中央揃え*/
-    margin-bottom: 1em;/*空白の挿入(外)*/
+    margin-bottom: 30px;/*空白の挿入(外)*/
 }
 
 .header {

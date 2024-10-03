@@ -9,9 +9,9 @@ body {
 }
 
 h1 {
-    text-align: center;/*中央揃え*/
-    font-weight: bold;
     font-size: 48px;
+    font-weight: bold;
+    text-align: center;/*中央揃え*/
     margin-bottom: 30px;
 }
 
@@ -155,13 +155,27 @@ video {
 }
 
 .blueprint_block p {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.box {
+    overflow: hidden;
+}
+
+#p {
+    margin-left: 0px;
+    margin-bottom: 100px;
 }
 
 .blueprint img {
     width: 1200px;
-    height: auto;/*横の比率に合わせて自動で設定する*/
+    height: auto;
+    transition-duration: 200ms;
     margin-bottom: 100px;
+}
+
+#\0030 {
+    margin-bottom: 0px;
 }
 
 .blender_block {
@@ -171,13 +185,9 @@ video {
 }
 
 .blender img {
-    width: 560px;
-    height: 400px;
+    width: 580px;
+    height: 290px;
     margin-bottom: 100px;
-}
-
-.detail {
-    margin: 0 auto;
 }
 
 .detail a {
