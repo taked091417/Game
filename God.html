@@ -41,16 +41,16 @@
         </div>
         <div class="image">
             <a id="Image"><h2 data-number="03">Image</h2></a>
-            <p>ゲーム画面やお気に入りの場所について紹介します。クリックで画像拡大できます。</p>
+            <p>ゲーム画面やお気に入りの場所、動画で見せれなかった部分について紹介します。クリックで画像拡大できます。</p>
             <div class="image_block">
-                <a href="HTML\img\滝.png" data-lightbox="group"><img src="HTML\img\滝.png"></a>
-                <a href="HTML\img\玄関.png" data-lightbox="group"><img src="HTML\img\玄関.png"></a>
-                <a href="HTML\img\食堂.png" data-lightbox="group"><img src="HTML\img\食堂.png"></a>
-                <a href="HTML\img\中庭.png" data-lightbox="group"><img src="HTML\img\中庭.png"></a>
-                <a href="HTML\img\トイレ.png" data-lightbox="group"><img src="HTML\img\トイレ.png"></a>
-                <a href="HTML\img\メニュー.png" data-lightbox="group"><img src="HTML\img\メニュー.png"></a>
-                <a href="HTML\img\アイテム.png" data-lightbox="group"><img src="HTML\img\アイテム.png"></a>
-                <a href="HTML\img\敵.png" data-lightbox="group"><img src="HTML\img\敵.png"></a>
+                <a href="HTML\img\UE_滝.png" data-lightbox="group"><img src="HTML\img\UE_滝.png"></a>
+                <a href="HTML\img\UE_玄関.png" data-lightbox="group"><img src="HTML\img\UE_玄関.png"></a>
+                <a href="HTML\img\UE_食堂.png" data-lightbox="group"><img src="HTML\img\UE_食堂.png"></a>
+                <a href="HTML\img\UE_中庭.png" data-lightbox="group"><img src="HTML\img\UE_中庭.png"></a>
+                <a href="HTML\img\UE_トイレ.png" data-lightbox="group"><img src="HTML\img\UE_トイレ.png"></a>
+                <a href="HTML\img\UE_メニュー.png" data-lightbox="group"><img src="HTML\img\UE_メニュー.png"></a>
+                <a href="HTML\img\UE_アイテム.png" data-lightbox="group"><img src="HTML\img\UE_アイテム.png"></a>
+                <a href="HTML\img\UE_敵.png" data-lightbox="group"><img src="HTML\img\UE_敵.png"></a>
             </div>
         </div>
         <div class="blueprint">
@@ -65,8 +65,8 @@
                     <p>赤いノードのLeft Shiftは、キーボードの左Shiftを押すとPressedの処理を開始します。Shiftを押している間は、プレイヤーのスピードを変更してスタミナを消費し、Shiftを離している間は、スタミナを回復する処理です。Do Onceノードは、1回のみ処理を通します。Add to Viewportノードは、対応する画面を表示し、Branchノードはifになります。</p>
                     <div class="box">
                         <img class="bp_image" id="0" src="HTML/img/BP_プレイヤー1.png">
-                        <p>※マウスホイールで拡大・縮小、"クリック"で移動、もう1回クリックすると停止します。</p>
                     </div>
+                    <p id="p">※マウスホイールで拡大・縮小、"クリック"で移動、もう1回クリックすると停止します。</p>
                     <p>画像上部は、アイテムを取得する処理です。1枚目の画像でタイマーを作成しているので0.3秒ごとにLine Traceを実行します。指定した方向に線を伸ばし、ヒットしたオブジェクトを分析します。それがアイテムであれば、処理はGateノードに進みます。Gateノードは、Enterを実行時にOpen状態であればExitに進みます。その後は、アイテムの画像を取得しアイテムスロットに追加します。</p>
                     <p>画像下部は、別Blueprintから呼び出されます。</p>
                     <div class="box">
@@ -83,7 +83,7 @@
                     <p>画面真ん中の、On Component Begin Overlapノードは、敵の周囲にOther Actor(今回はプレイヤー)が入るとPlay Soundノード(SEを再生)します。</p>
                     <p>画面下部では、プレイヤーを見つけた際に追いかける処理になっています。On Perception Updatedノードで敵の視界が変わるたびに実行されます。For Each Loopノードで見つけたものを検索し、プレイヤーであれば追いかけます。15秒後にプレイヤーを追っている状態か確認し、そうでなければ見失う状態にしています。</p>
                     <div class="box">
-                        <img class="bp_image" id="3" src="HTML/img/BP_スレンダーマン.png">
+                        <img class="bp_image" id="3" src="HTML/img/BP_敵.png">
                     </div>
                 <h2>ふすま</h2>
                     <p>プレイヤーのLine Traceがふすまに当たるとSet Overlay Fusumaノードを呼び出します。これは、アウトライン(オブジェクト周り)の色を変化させることで、プレイヤーがどのオブジェクトを選択しているのか分かりやすくしています。</p>
@@ -104,7 +104,7 @@
                 <h2>鍵の使用</h2>
                     <p>ここでもプレイヤーのLine Traceを使用します。鍵の付いた引き出しや南京錠を開けるための処理です。</p>
                     <div class="box">
-                        <img class="bp_image" id="7" src="HTML/img/BP_鍵使用.png">
+                        <img class="bp_image" id="7" src="HTML/img/BP_鍵_使用.png">
                     </div>
                 <h2>アイテムスロット</h2>
                     <p>ここから紹介するのは、Widget Blueprintと呼ばれるUIを作成、制御するBlueprintになります。</p>
@@ -112,17 +112,17 @@
                     <p>画面真ん中では、どのアイテムスロットを選択しているかを分かりやすくする処理です。マウスホイールの動きを値に変えて、それによって対応するアイテムスロットに移動します。</p>
                     <p>画面下部では、アイテムを使用する処理です。ステージにアイテムが存在していないとアイテムが持つBlueprintは実行できないので、SpawnActorノードでアイテムを生成します。生成したアイテムを判別し対応する効果を発動します。</p>
                     <div class="box">
-                        <img class="bp_image" id="8" src="HTML/img/WBP_アイテムスロット.png">
+                        <img class="bp_image" id="8" src="HTML/img/BP_アイテムスロット.png">
                     </div>
                 <h2>アイテムスロット(チェンジイメージ)</h2>
                     <p>このBlueprintは、プレイヤーのLine Trace時に実行されます。Line TraceのところにUpdate Item Imageノードがありますので確認してみてください。アイテムは、自身の画像を所持しているのでBranchノードでそれを判別しています。ここでFlaseに流れるのは、旅館の壁などアイテムではないオブジェクトです。次にFor Each Loopノードでアイテムスロットを順番に検索し、同じアイテムを所持していれば、個数を+1します。所持していなければ、違うアイテムスロットに画像を格納し個数を+1します。</p>
                     <div class="box">                    
-                        <img class="bp_image" id="9" src="HTML/img/WBP_アイテムスロット_チェンジイメージ.png">
+                        <img class="bp_image" id="9" src="HTML/img/BP_アイテムスロット_チェンジイメージ.png">
                     </div>
                 <h2>アイテムスロット(救急箱)</h2>
                     <p>このBlueprintは、プレイヤーがダメージを受けた際に実行されます。For Each Loopノードで、アイテムスロットを順番に検索し、救急箱を所持しているか判別します。救急箱の効果は、プレイヤーのBlueprintで実行しています。</p>
                     <div class="box">
-                        <img class="bp_image" id="10" src="HTML/img/WBP_アイテムスロット_救急箱.png">
+                        <img class="bp_image" id="10" src="HTML/img/BP_アイテムスロット_救急箱.png">
                     </div>
                 <script src="HTML/js/image.js"></script>
             </div>    
