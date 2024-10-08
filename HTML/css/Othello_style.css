@@ -58,15 +58,78 @@ h2::before {/*疑似要素を生成*/
     content: attr(data-label);
 }
 
+.list {/*枠*/
+    list-style-type: none;/*連番を何で表すか*/
+    padding: 1em;
+    border: 5px solid #2589d0;
+    display: inline-block;
+    counter-reset: li;/*連番の設定*/
+    width: 600px;
+    margin-left: 590px;
+    margin-bottom: 100px;
+}
+
+.list li {/*文字*/
+    display: flex;
+    align-items: center;
+    padding: .3em;
+}
+
+.list li::before {/*連番*/
+    display: inline-block;
+    min-width: 1.7em;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #2589d0;
+    color: #fff;
+    font-weight: bold;
+    font-size: .75em;
+    line-height: 1.7em;
+    text-align: center;
+    content: counter(li);
+    counter-increment: li;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
+.container h2 {
+    position: relative;
+    padding-top: 1.5em;
+    color: #333333;
+    font-size: 36px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.container h2::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    color: #d9f4ff;
+    font-size: 2.5em;
+    line-height: 1;
+    content: attr(data-number);
+    pointer-events: none;
+}
+
+.container p {
+    width: 1000px;
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
 video {
     width: 1200px;
     height: 600px;
-    margin-bottom: 100px;
+}
+
+.movie p {
+    margin-left: 0px;
 }
 
 .detail a {
